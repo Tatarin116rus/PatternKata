@@ -1,5 +1,5 @@
 import type { Space, SpaceApiResponse } from '../types/Space.ts';
-// Базовый URL можно вынести в shared/config
+
 const BASE_URL = 'https://api.spacexdata.com/v3/launches';
 
 
@@ -20,13 +20,3 @@ export const fetchSpacesByYear = async (year: string = '2020'): Promise<Space[]>
   const data: SpaceApiResponse[] = await response.json();
   return data.map(mapApiResponseToSpace);
 };
-/*
-// Если нужен один запуск по ID, можно добавить отдельную функцию
-export const fetchSpaceById = async (id: string): Promise<Space> => {
-  const response = await fetch(`${BASE_URL}/${id}`);
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  const data: SpaceApiResponse = await response.json();
-  return mapApiResponseToSpace(data);
-};*/

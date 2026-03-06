@@ -1,12 +1,11 @@
-// src/features/spaceDetails/ui/SpaceDetailsModal.tsx
 
 import  Modal from '../../shared/ui/Modal';
 import type { Space } from '../../entities/space/types/Space';
 import { Text, Group, Image } from '@mantine/core';
 
 interface SpaceDetailsModalProps {
-  space: Space;            // данные выбранного запуска
-  isOpen: boolean;         // флаг открытия (можно управлять извне)
+  space: Space;           
+  isOpen: boolean;      
   onClose: () => void;     
 }
 
