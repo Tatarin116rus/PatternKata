@@ -1,0 +1,10 @@
+.header {
+
+  background-color: white;
+  color: black;
+  z-index: 1000;
+
+ width: 80%; 
+ max-width: 1200px;
+  margin: 0 auto;
+}
